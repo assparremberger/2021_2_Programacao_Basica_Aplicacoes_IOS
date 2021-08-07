@@ -38,6 +38,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Kb-mA-B4a">
                                 <rect key="frame" x="349" y="194" width="51" height="31"/>
+                                <connections>
+                                    <action selector="aceitaEmail:" destination="BYZ-38-t0r" eventType="valueChanged" id="SlH-Xb-Mlt"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-35-Aoo">
                                 <rect key="frame" x="147" y="422" width="120" height="52"/>
@@ -142,6 +145,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblAceitaEmail" destination="3df-y9-CMD" id="LXC-pN-lPP"/>
                         <outlet property="sliderBlue" destination="bWO-H4-MGE" id="CZG-8I-QdB"/>
                         <outlet property="sliderGreen" destination="oZ2-Uy-pzQ" id="Z4Q-VZ-O9x"/>
                         <outlet property="sliderRed" destination="bdo-ah-rL9" id="NDw-aF-HV5"/>
@@ -149,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="53.571428571428569"/>
+            <point key="canvasLocation" x="-923" y="-15"/>
         </scene>
     </scenes>
     <resources>

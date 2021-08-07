@@ -13,11 +13,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderGreen: UISlider!
     @IBOutlet weak var sliderBlue: UISlider!
     
+    @IBOutlet weak var lblAceitaEmail: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func aceitaEmail(_ sender: UISwitch) {
+    //    let meuSwitch:UISwitch = sender as! UISwitch
+        if( sender.isOn ) {
+            lblAceitaEmail.textColor = .green
+        }else{
+            lblAceitaEmail.textColor = .red
+        }
+        
+    }
+    
     @IBAction func redAlterar(_ sender: Any) {
         alterarCor()
     }
