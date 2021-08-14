@@ -46,6 +46,7 @@
                                 <rect key="frame" x="147" y="422" width="120" height="52"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="KWG-dL-Rpu"/>
                                     <constraint firstAttribute="width" constant="120" id="dms-N5-eVA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
@@ -103,6 +104,13 @@
                                     <action selector="blueAlterar:" destination="BYZ-38-t0r" eventType="valueChanged" id="I3M-mq-Y4X"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsD-u9-7TG">
+                                <rect key="frame" x="146" y="657" width="141" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22624294449999999" green="0.9656982422" blue="0.4338392855" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -153,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-923" y="-15"/>
+            <point key="canvasLocation" x="-923.1884057971015" y="-15.401785714285714"/>
         </scene>
     </scenes>
     <resources>

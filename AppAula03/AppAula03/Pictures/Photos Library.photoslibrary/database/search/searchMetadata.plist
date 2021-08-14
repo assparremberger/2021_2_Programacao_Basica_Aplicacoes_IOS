@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BlacklistedMeaningsByMeaning</key>
+	<dict/>
+	<key>SceneWhitelist</key>
+	<array>
+		<string>Formatura</string>
+		<string>Aquário</string>
+		<string>Comida</string>
+		<string>Patinação no Gelo</string>
+		<string>Montanha</string>
+		<string>Precipício</string>
+		<string>Basquete</string>
+		<string>Tênis</string>
+		<string>Joias</string>
+		<string>Queijo</string>
+		<string>Softball</string>
+		<string>Futebol americano</string>
+		<string>Circo</string>
+		<string>Jet-ski</string>
+		<string>Parquinho</string>
+		<string>Carrossel</string>
+		<string>Paintball</string>
+		<string>Windsurfe</string>
+		<string>Veleiro</string>
+		<string>Banho de Sol</string>
+		<string>Represa</string>
+		<string>Lareira</string>
+		<string>Flor</string>
+		<string>Mergulho Autônomo</string>
+		<string>Caminhada</string>
+		<string>Cetáceo</string>
+		<string>Píer</string>
+		<string>Boliche</string>
+		<string>Snowboard</string>
+		<string>Zoológico</string>
+		<string>Moto de Neve</string>
+		<string>Cinema</string>
+		<string>Barco</string>
+		<string>Cassino</string>
+		<string>Carro</string>
+		<string>Mergulho</string>
+		<string>Ciclismo</string>
+		<string>Instrumento Musical</string>
+		<string>Jogo de Tabuleiro</string>
+		<string>Castelo</string>
+		<string>Pôr do Sol Nascer do Sol</string>
+		<string>Artes Marciais</string>
+		<string>Motocross</string>
+		<string>Submarino</string>
+		<string>Gato</string>
+		<string>Neve</string>
+		<string>Kiteboard</string>
+		<string>Squash</string>
+		<string>Gêiser</string>
+		<string>Música</string>
+		<string>Arco e Flecha</string>
+		<string>Deserto</string>
+		<string>Blackjack</string>
+		<string>Fogos de artifício</string>
+		<string>Carro esporte</string>
+		<string>Felino</string>
+		<string>Futebol</string>
+		<string>Museu</string>
+		<string>Bebê</string>
+		<string>Esgrima</string>
+		<string>Ferrovia</string>
+		<string>Nascar</string>
+		<string>Skysurfing</string>
+		<string>Passarinho</string>
+		<string>Jogos</string>
+		<string>Beisebol</string>
+		<string>Adestramento</string>
+		<string>Snorkel</string>
+		<string>Pirâmide</string>
+		<string>Pipa</string>
+		<string>Barco a Remo</string>
+		<string>Golfe</string>
+		<string>Esportes aquáticos</string>
+		<string>Relâmpago</string>
+		<string>Cânion</string>
+		<string>Auditório</string>
+		<string>Céu noturno</string>
+		<string>Karaokê</string>
+		<string>Esqui</string>
+		<string>Desfile</string>
+		<string>Floresta</string>
+		<string>Balão de Ar Quente</string>
+		<string>Parada do Dragão</string>
+		<string>Ovo de Páscoa</string>
+		<string>Monumento</string>
+		<string>Selva</string>
+		<string>Ação de Graças</string>
+		<string>Cavalo de Corrida</string>
+		<string>Estádio</string>
+		<string>Avião</string>
+		<string>Balé</string>
+		<string>Ioga</string>
+		<string>Recife de corais</string>
+		<string>Patinação</string>
+		<string>Wrestling</string>
+		<string>Bicicleta</string>
+		<string>Tatuagem</string>
+		<string>Parque de Diversões</string>
+		<string>Canoa</string>
+		<string>Animação de Torcida</string>
+		<string>Pingue-Pongue</string>
+		<string>Pescaria</string>
+		<string>Mágica</string>
+		<string>Réptil</string>
+		<string>Esporte de Inverno</string>
+		<string>Cachoeira</string>
+		<string>Trem</string>
+		<string>Bonsai</string>
+		<string>Surfe</string>
+		<string>Cachorro</string>
+		<string>Bolo</string>
+		<string>Descida de Trenó</string>
+		<string>Castelo de Areia</string>
+		<string>Geleira</string>
+		<string>Farol</string>
+		<string>Equestre</string>
+		<string>Rafting</string>
+		<string>Litoral</string>
+		<string>Hóquei</string>
+		<string>Papai Noel</string>
+		<string>Carro de Fórmula Um</string>
+		<string>Esporte</string>
+		<string>Veículo</string>
+		<string>Boxe</string>
+		<string>Patinação</string>
+		<string>Subaquático</string>
+		<string>Orquestra</string>
+		<string>Carnaval</string>
+		<string>Foguete</string>
+		<string>Andar de Skate</string>
+		<string>Helicóptero</string>
+		<string>Apresentação</string>
+		<string>Oktoberfest</string>
+		<string>Polo Aquático</string>
+		<string>Parque para Skate</string>
+		<string>Animal</string>
+		<string>Casa noturna</string>
+		<string>Instrumento de Cordas</string>
+		<string>Dinossauro</string>
+		<string>Ginástica Olímpica</string>
+		<string>Críquete</string>
+		<string>Vulcão</string>
+		<string>Lago</string>
+		<string>Aurora</string>
+		<string>Dança</string>
+		<string>Concerto</string>
+		<string>Escalada</string>
+		<string>Asa Delta</string>
+		<string>Rodeio</string>
+		<string>Peixe</string>
+		<string>Arte</string>
+		<string>Motocicleta</string>
+		<string>Bola de Voleibol</string>
+		<string>Wakeboard</string>
+		<string>Badminton</string>
+		<string>Automobilismo</string>
+		<string>Sumô</string>
+		<string>Parapente</string>
+		<string>Paraquedismo</string>
+		<string>Kickboxing</string>
+		<string>Pinhata</string>
+		<string>Pebolim</string>
+		<string>Kart</string>
+		<string>Pôquer</string>
+		<string>Caiaque</string>
+		<string>Natação</string>
+		<string>Veículo para todo terreno</string>
+		<string>Praia</string>
+		<string>Alvo para Dardos</string>
+		<string>Atletismo</string>
+		<string>Acampamento</string>
+		<string>Tornado</string>
+		<string>Bilhar</string>
+		<string>Rúgbi</string>
+		<string>Show Aéreo</string>
+	</array>
+</dict>
+</plist>

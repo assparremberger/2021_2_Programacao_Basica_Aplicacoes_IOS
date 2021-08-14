@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key></key>
+	<dict>
+		<key>email</key>
+		<string>peterson.mauricio.3@facebook.com</string>
+	</dict>
+	<key>34A79487-1D1D-43B6-804E-D2468E7AC9F9</key>
+	<dict>
+		<key>emails</key>
+		<array>
+			<string>adalto@mercadodogago.com.br</string>
+		</array>
+	</dict>
+	<key>48F66902-C063-4B72-B573-58E7555E8067</key>
+	<dict>
+		<key>emails</key>
+		<array>
+			<string>peterson.mauricio.3@facebook.com</string>
+		</array>
+	</dict>
+	<key>644149BF-D0EE-4604-AB17-C19B87CE907C</key>
+	<dict>
+		<key>emails</key>
+		<array>
+			<string>adalto@mercadodogago.com.br</string>
+		</array>
+	</dict>
+	<key>82dd17292c580feb98dd706be91561fced22ae5b5d869489bae980b3cbfee7da</key>
+	<dict>
+		<key>email</key>
+		<string>adaltoss@me.com</string>
+		<key>firstName</key>
+		<string>Adalto</string>
+		<key>fullName</key>
+		<string>Adalto Sparremberger</string>
+		<key>lastName</key>
+		<string>Sparremberger</string>
+	</dict>
+	<key>DE5CC836-48A3-40A2-A6C6-2FCBB9B45F89</key>
+	<dict>
+		<key>emails</key>
+		<array>
+			<string>peterson.mauricio.3@facebook.com</string>
+		</array>
+	</dict>
+</dict>
+</plist>
