@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
 struct ContentView: View {
     
     @State private var texto = ""
@@ -16,14 +23,20 @@ struct ContentView: View {
     var body: some View {
         
             
-        VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 10){
+        VStack(alignment: .center, spacing: 10){
             HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 5){
                 Text("Nome: ")
                 
-                TextField("Didite aqui..", text: $texto).border(Color.red)
+                TextField("Didite aqui..", text: $texto ){
+                    UIApplication.shared.endEditing()
+                }.border(Color.red)
+                
+                
                // Spacer(minLength: 60)
                 Quadradinhos()
             }
+            
+            TextField("Digite...", $texto).re
             
             HStack(alignment: .center, spacing: 5){
                 Text("Idade: \(idade)")
@@ -64,6 +77,7 @@ struct Quadradinhos : View {
         }).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 10)
         .padding(30)
         .background(Color.yellow, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+       // .frame(width: _maxle, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
     }
 }
 
