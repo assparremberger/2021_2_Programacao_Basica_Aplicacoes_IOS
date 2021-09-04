@@ -7,13 +7,12 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
     
     @State var mostrarModal = false
     @State var mostrarTelaCheia = false
-    
-    // importando o enviroment para obtermos o gerenciador do objeto, passando como Key Path o \.managedObjectContext
-    //    @Environment(\.managedObjectContext) var managedObjectContext
     
     
     var body: some View {
@@ -61,7 +60,11 @@ struct TelaCheiaView: View {
 }
 
 
-struct ClientesView: View {
+
+//View para editar Cliente
+struct EditarClienteView: View {
+    
+    var cliente: Cliente
     
     @State var txtNomeCliente = ""
     
@@ -70,6 +73,35 @@ struct ClientesView: View {
     
     // enviroment construído para permitir fechar a View
     @Environment(\.presentationMode) var presentation
+    
+    var body: some View{
+        VStack{
+            TextField("Digite o nome do cliente", text: $txtNomeCliente )
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .onAppear(){
+                    self.txtNomeCliente = self.cliente.nomeCli ?? "erro"
+                }
+                Button("Salvar Cliente"){
+                    cliente.nomeCli? =  txtNomeCliente
+                    cliente.managedObjectContext?.refresh(cliente, mergeChanges: true)
+                    PersistenceController.banco.save()
+                    self.txtNomeCliente = ""
+                    presentation.wrappedValue.dismiss()
+                }
+        }.padding()
+        .navigationBarTitle("Editar Clientes", displayMode: .inline)
+    }
+}
+
+
+
+struct ClientesView: View {
+    
+    @State var txtNomeCliente = ""
+    
+    // importando o enviroment para obtermos o gerenciador do objeto, passando como Key Path o \.managedObjectContext
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
     
     @FetchRequest(
         entity: Cliente.entity(),
@@ -82,10 +114,10 @@ struct ClientesView: View {
         VStack{
             List{
                 ForEach( clientes , id: \.self){ cli in
-                    Text("\(cli.nomeCli ?? " -- ") ")
+                    NavigationLink( "\(cli.nomeCli ?? " -- ") " , destination: EditarClienteView(cliente: cli) )
                 }
                 .onDelete(perform: removerCliente)
-            }
+            }.navigationBarTitle("Clientes", displayMode: .inline)
             HStack{
                 TextField("Digite o nome do cliente", text: $txtNomeCliente )
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -94,7 +126,6 @@ struct ClientesView: View {
                     cliente.nomeCli = self.txtNomeCliente
                     PersistenceController.banco.save()
                     self.txtNomeCliente = ""
-                    self.presentation.wrappedValue.dismiss()
                 }
             }
         }.padding()
@@ -108,6 +139,41 @@ struct ClientesView: View {
         }
     }
 }
+
+
+//View para editar Produto
+struct EditarProdutoView: View {
+    
+    var produto: Produto
+    
+    @State var txtNomeProduto = ""
+    
+    // importando o enviroment para obtermos o gerenciador do objeto, passando como Key Path o \.managedObjectContext
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    // enviroment construído para permitir fechar a View
+    @Environment(\.presentationMode) var presentation
+    
+    var body: some View{
+        VStack{
+            TextField("Digite o nome do produto", text: $txtNomeProduto )
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .onAppear(){
+                    self.txtNomeProduto = self.produto.nomeProd ?? "erro"
+                }
+                Button("Salvar Cliente"){
+                    produto.nomeProd? = txtNomeProduto
+                    produto.managedObjectContext?.refresh(produto, mergeChanges: true)
+                    PersistenceController.banco.save()
+                    self.txtNomeProduto = ""
+                    presentation.wrappedValue.dismiss()
+                }
+        }.padding()
+        .navigationBarTitle("Editar Produtos", displayMode: .inline)
+    }
+}
+
+
 
 
 struct ProdutosView: View {
@@ -127,10 +193,10 @@ struct ProdutosView: View {
         VStack{
             List{
                 ForEach( produtos , id: \.self){ prod in
-                    Text("\(prod.nomeProd ?? " -- ") ")
+                    NavigationLink( "\(prod.nomeProd ?? " -- ") " , destination: EditarProdutoView(produto: prod) )
                 }
                 .onDelete(perform: removerProduto)
-            }
+            }.navigationBarTitle("Produtos", displayMode: .inline)
             HStack{
                 TextField("Digite o nome do produto", text: $txtNomeProduto )
                 .textFieldStyle(RoundedBorderTextFieldStyle())
