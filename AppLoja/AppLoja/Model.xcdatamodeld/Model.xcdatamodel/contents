@@ -4,7 +4,12 @@
         <attribute name="idCliente" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="nomeCli" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Produto" representedClassName="Produto" syncable="YES" codeGenerationType="class">
+        <attribute name="idProduto" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="nomeProd" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Cliente" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="Produto" positionX="-54" positionY="9" width="128" height="59"/>
     </elements>
 </model>

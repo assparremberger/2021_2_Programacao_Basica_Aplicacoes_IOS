@@ -12,7 +12,8 @@ struct ContentView: View {
     @State var mostrarModal = false
     @State var mostrarTelaCheia = false
     
-    @Environment(\.managedObjectContext) var managedObjectContext
+    // importando o enviroment para obtermos o gerenciador do objeto, passando como Key Path o \.managedObjectContext
+    //    @Environment(\.managedObjectContext) var managedObjectContext
     
     
     var body: some View {
@@ -64,8 +65,10 @@ struct ClientesView: View {
     
     @State var txtNomeCliente = ""
     
+    // importando o enviroment para obtermos o gerenciador do objeto, passando como Key Path o \.managedObjectContext
     @Environment(\.managedObjectContext) var managedObjectContext
     
+    // enviroment construído para permitir fechar a View
     @Environment(\.presentationMode) var presentation
     
     @FetchRequest(
@@ -81,6 +84,7 @@ struct ClientesView: View {
                 ForEach( clientes , id: \.self){ cli in
                     Text("\(cli.nomeCli ?? " -- ") ")
                 }
+                .onDelete(perform: removerCliente)
             }
             HStack{
                 TextField("Digite o nome do cliente", text: $txtNomeCliente )
@@ -96,6 +100,13 @@ struct ClientesView: View {
         }.padding()
         .navigationBarTitle("Lista de Clientes", displayMode: .inline)
     }
+    //Função para excluir Clientes
+    func removerCliente(at offset: IndexSet){
+        for index in offset{
+            let cli = clientes[index]
+            PersistenceController.banco.delete( cli )
+        }
+    }
 }
 
 
@@ -103,22 +114,44 @@ struct ProdutosView: View {
     
     @State var txtNomeProduto = ""
     
+    // importando o enviroment para obtermos o gerenciador do objeto, passando como Key Path o \.managedObjectContext
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    
+    @FetchRequest(
+        entity: Produto.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Produto.nomeProd, ascending: true)])
+    var produtos: FetchedResults<Produto>
+    
     var body: some View{
         VStack{
             List{
-            
+                ForEach( produtos , id: \.self){ prod in
+                    Text("\(prod.nomeProd ?? " -- ") ")
+                }
+                .onDelete(perform: removerProduto)
             }
             HStack{
                 TextField("Digite o nome do produto", text: $txtNomeProduto )
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button("Salvar Produto"){
-                    
+                    let produto = Produto(context: managedObjectContext)
+                    produto.nomeProd = self.txtNomeProduto
+                    PersistenceController.banco.save()
                     self.txtNomeProduto = ""
                 }
             }
         }.padding()
         .navigationBarTitle("Lista de Produtos", displayMode: .large)
 
+    }
+    
+    //Função para excluir Produtos
+    func removerProduto(at offset: IndexSet){
+        for index in offset{
+            let prod = produtos[index]
+            PersistenceController.banco.delete( prod )
+        }
     }
 }
 
