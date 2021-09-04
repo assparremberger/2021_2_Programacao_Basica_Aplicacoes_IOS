@@ -43,6 +43,7 @@ struct ContentView: View {
             }.padding(.bottom, 50)
             
             
+            
             Link( destination: /*@START_MENU_TOKEN@*/URL(string: "https://www.apple.com")!/*@END_MENU_TOKEN@*/, label: {
                 Text("Cliqui aqui para abrir a página")
             })
